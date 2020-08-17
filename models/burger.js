@@ -1,17 +1,23 @@
 const orm = require("../config/orm.js")
 
+
+
 let burgerInput= {
-    selectAll: function(cb){
+    select: function(cb){
         orm.selectAll("burgers",(results) =>{
            cb(results) 
         })
     },
-    // InsertOne: function(cb){
-
-    // }
-    // updateOne: function(cb){
-
-    // }
+    insert: function(cols, vals, cb) {
+        orm.insertOne("burgers", cols, vals, function(res) {
+          cb(res);
+        });
+    },
+    update: function(objColVals, condition, cb) {
+        orm.updateOne("burgers", objColVals, condition, function(res) {
+          cb(res);
+        });
+    },
 }
 
 module.exports = burgerInput;
