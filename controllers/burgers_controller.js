@@ -3,7 +3,7 @@ const router = express.Router();
 const burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
-    burger.all(function(data){
+    burger.select(function(data){
         var hbsObject = {
             burgers: data
         };
@@ -13,7 +13,7 @@ router.get("/", function(req, res) {
 })
 
 router.post("/api/burgers", function(req, res) {
-    burger.create(req.body.burger_name, function(result) {
+    burger.insert(req.body.burger_name, function(result) {
       // Send back the ID of the new quote
       res.json({ id: result.insertId });
       res.redirect("/")
