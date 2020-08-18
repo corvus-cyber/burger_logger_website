@@ -3,19 +3,19 @@ var orm = require("../config/orm.js")
 
 
 let burgerInput= {
-    select: function(cb){
+    select: function(callback){
         orm.selectAll("burgers",(results) =>{
-           cb(results) 
+           callback(results) 
         })
     },
-    insert: function(cols, vals, cb) {
+    insert: function(cols, vals, callback) {
         orm.insertOne("burgers", cols, vals, function(res) {
-          cb(res);
+          callback(res);
         });
     },
-    update: function(objColVals, condition, cb) {
+    update: function(objColVals, condition, callback) {
         orm.updateOne("burgers", objColVals, condition, function(res) {
-          cb(res);
+          callback(res);
         });
     },
 }
