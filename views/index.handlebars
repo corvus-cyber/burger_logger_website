@@ -1,17 +1,24 @@
 <div class="container">
     <div class ="row">
-        <div class="col-md-12">
+        <div class="col-md-12 d-flex justify-content-center">
             <h1>BURGER LOGGER</h1>
-            <img src="../public/assets/img/burger-clipart.png" alt="clipart img of cheeseburger">
-
+        </div>
+        <div class="col-md-12 d-flex justify-content-center">
+            <img src="/assets/img/burger-clipart.png" class="img-fluid"alt="clipart img of cheeseburger">
+        </div>
+            <div class="col-md-12 justify-content-center instructions">
+                <p>Here you can log all of the delicious burgers your mind can conjour for when you want to go on a cheat day. <br> 
+                Simply enter the type of burger you'd like to eat later, press the add burger button, and your new choice will be added to the list. <br>
+                Upon eating said burger, simply press the devour button next to it, and it will be transferred to a new list.</p>
         </div>
     </div>
     
-    <div class="row">
-        <div class="col-md-6 submitform justify-content-center">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6 submitform d-flex justify-content-center">
             <form action="build-burgers">
                 <input type="text" class="form control" name="burger-type" id="create-burger">
-                <button type="submit" class="btn btn-primary" id="submit-burger-bttn">Add Burger</button>
+                <button type="submit" class="btn btn-lg" id="submit-burger-bttn">Add Burger</button>
+                <h5>Enter the name of the burger you wish to add to your list</h5>
             </form>
         </div>
     </div>

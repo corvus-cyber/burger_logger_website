@@ -2,7 +2,33 @@ body{
     background-color: #d9dcd6;
 }
 
+h1{ 
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+.img-fluid{
+    max-width: 20%;
+}
+.instructions{    
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: silver;
+    box-shadow: 0 0 5px;
+}
 .submitform{
+    margin-top: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     font-family: 'Courier New', Courier, monospace;
     background-color: steelblue;
+    box-shadow: 0 0 5px;
+}
+
+#submit-burger-bttn{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
