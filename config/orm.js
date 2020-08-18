@@ -1,4 +1,4 @@
-const connection = require("./connection.js");
+var connection = require("./connection ");
 
 //----This was taken directly from activity 17 of last week's lecture----
 
@@ -52,16 +52,19 @@ let orm = {
             cb(result);
         })
     },
-    insertOne: function(table, objColVals, condition, cb) {
-        var queryString = "UPDATE " + table;
+    insertOne: function(table, cols, vals, cb) {
+        var queryString = "INSERT INTO " + table;
     
-        queryString += " SET ";
-        queryString += objToSql(objColVals);
-        queryString += " WHERE ";
-        queryString += condition;
+        queryString += " (";
+        queryString += cols.toString();
+        queryString += ") ";
+        queryString += "VALUES (";
+        queryString += printQuestionMarks(vals.length);
+        queryString += ") ";
     
         console.log(queryString);
-        connection.query(queryString, function(err, result) {
+    
+        connection.query(queryString, vals, function(err, result) {
           if (err) {
             throw err;
           }
