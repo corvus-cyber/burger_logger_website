@@ -9,36 +9,42 @@
                 Upon eating said burger, simply press the devour button next to it, and it will be transferred to a new list.</p>
         </div>
     </div>
+    <div class="row justify-content-center">
+        <div class="col-md-4 d-flex justify-content-center">
+            <img src="/assets/img/burger-clipart.png" class="img-fluid"alt="clipart img of cheeseburger">
+        </div>
+
+    </div>
     <div class="row">
         {{!-- This is where the data from sql with a devoured=0 will be placed  --}}
-        <div class="col-md-4 dreamlist">
+        <div class="col-md-5 dreamlist">
         <h3>Waiting To Be Devoured:</h3>
         <hr>
             {{#each burgers}}
                 {{#unless this.devoured}}
+                <hr>
                 <div class="col-md-12">
-                    <pre>#{{this.id}}. {{this.burger_name}}</pre>
-                </div>
-                <div class="col-md-2">
+                    <pre>#{{this.id}}.{{this.burger_name}}</pre>
                     <form class="eat-button">
                         <input type="hidden" type="text" class="burger_id">
-                        <button type="submit" class="btn btn-sm devour" data-id={{id}}>Devour</button>  
+                        <button type="submit" class="btn btn-xs devour" data-id={{id}}>Devour It!</button>  
                     </form>
                 </div>
+                <hr>
                 {{/unless}}
             {{/each}}
         </div>
-        <div class="col-md-4 d-flex justify-content-center">
-            <img src="/assets/img/burger-clipart.png" class="img-fluid"alt="clipart img of cheeseburger">
-        </div>
-        <div class="col-md-4 devoured-list">
+        <div class="col-md-2"></div>
+        <div class="col-md-5 devoured-list">
             <h3>List Of Devoured Burgers:</h3>
             <hr>
             {{#each burgers}}
                 {{#if this.devoured}}
+                <hr>
                 <div class="col-md-12">
                     <pre>#{{this.id}}. {{this.burger_name}}</pre>
                 </div>
+                <hr>
                 {{/if}}
             {{/each}}
 
