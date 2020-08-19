@@ -20,19 +20,22 @@
         <div class="col-md-5 dreamlist">
         <h3>Waiting To Be Devoured:</h3>
         <hr>
-            {{#each burgers}}
-                {{#unless this.devoured}}
+            <div class="row">
+                {{#each burgers}}
+                    {{#unless this.devoured}}
+                        <div class="col-md-8">   
+                                <pre>#{{this.id}}.{{this.burger_name}}</pre>
+                        </div>
+                        <div class="col-md-2 mb-1">
+                            <form class="eat-button">
+                                <input type="hidden" type="text" class="burger_id ">
+                                <button type="submit" class="btn btn-xs devour" data-id={{id}}>Devour It!</button>  
+                            </form>
+                        </div>   
+                    {{/unless}}
+                {{/each}}
                 <hr>
-                <div class="col-md-12">
-                    <pre>#{{this.id}}.{{this.burger_name}}</pre>
-                    <form class="eat-button">
-                        <input type="hidden" type="text" class="burger_id">
-                        <button type="submit" class="btn btn-xs devour" data-id={{id}}>Devour It!</button>  
-                    </form>
-                </div>
-                <hr>
-                {{/unless}}
-            {{/each}}
+            </div>
         </div>
         <div class="col-md-2"></div>
         <div class="col-md-5 devoured-list">
@@ -40,11 +43,9 @@
             <hr>
             {{#each burgers}}
                 {{#if this.devoured}}
-                <hr>
-                <div class="col-md-12">
-                    <pre>#{{this.id}}. {{this.burger_name}}</pre>
-                </div>
-                <hr>
+                    <div class="col-md-12">
+                        <pre>#{{this.id}}. {{this.burger_name}}</pre>
+                    </div>
                 {{/if}}
             {{/each}}
 

@@ -9,7 +9,6 @@ h1{
 
 .img-fluid{
     max-width: 90%;
-    max-height: 90%
 }
 .instructions{    
     margin-top: 2%;
@@ -54,4 +53,7 @@ h3{
 #submit-burger-bttn{
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.eat-button{
+    padding-left: 2%;
 }
