@@ -21,7 +21,7 @@ $(function() {
       );
     });
      //This will create the post  
-    $("#submit-burger-bttn").on("click", function(event) {
+    $(".build-burgers").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
   

@@ -9,6 +9,7 @@ h1{
 
 .img-fluid{
     max-width: 90%;
+    max-height: 90%
 }
 .instructions{    
     margin-top: 2%;
