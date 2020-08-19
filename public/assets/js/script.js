@@ -1,20 +1,20 @@
 $(function() {
-    $(".eat-button").on("submit", function(event) {
+    $(".devour").on("click", function(event) {
         event.preventDefault();
         var id = $(this).data("id");
-        var newSleep = $(this).data("newsleep");
+        debugger;
   
-      var newSleepState = {
-        sleepy: newSleep
+      var beenDevoured = {
+        devoured: true
       };
   
       // Send the PUT request.
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
-        data: newSleepState
+        data: beenDevoured
       }).then(
         function() {
-          console.log("changed sleep to", newSleep);
+          console.log("This Burger has been eaten", beenDevoured);
           // Reload the page to get the updated list
           location.reload();
         }
