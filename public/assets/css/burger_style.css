@@ -32,6 +32,15 @@ h3{
     background-color: steelblue;
     box-shadow: 0 0 5px; 
 }
+.devoured-list{
+    margin-top: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 2%;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: steelblue;
+    box-shadow: 0 0 5px; 
+}
 .submitform{
     margin-top: 5%;
     padding-top: 1%;

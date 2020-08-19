@@ -31,12 +31,17 @@
         <div class="col-md-4 d-flex justify-content-center">
             <img src="/assets/img/burger-clipart.png" class="img-fluid"alt="clipart img of cheeseburger">
         </div>
-        <div class="col-md-4">
-            {{!-- {{#each}}
+        <div class="col-md-4 devoured-list">
+            <h3>List Of Devoured Burgers:</h3>
+            <hr>
+            {{#each burgers}}
                 {{#if this.devoured}}
+                <div class="col-md-12">
                     <pre>#{{this.id}}. {{this.burger_name}}</pre>
+                </div>
                 {{/if}}
-            {{/each}} --}}
+            {{/each}}
+
         </div>
     </div>
     
