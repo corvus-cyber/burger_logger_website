@@ -25,6 +25,7 @@
                     {{#unless this.devoured}}
                         <div class="col-md-8">   
                                 <pre>#{{this.id}}.{{this.burger_name}}</pre>
+                                <hr>
                         </div>
                         <div class="col-md-2 mb-1">
                             <form class="eat-button">
@@ -34,7 +35,7 @@
                         </div>   
                     {{/unless}}
                 {{/each}}
-                <hr>
+            <hr>
             </div>
         </div>
         <div class="col-md-2"></div>
@@ -43,12 +44,13 @@
             <hr>
             {{#each burgers}}
                 {{#if this.devoured}}
-                    <div class="col-md-12">
-                        <pre>#{{this.id}}. {{this.burger_name}}</pre>
-                    </div>
+                <div class="col-md-12">
+                    <pre>#{{this.id}}. {{this.burger_name}}</pre>
+                </div> 
+                <hr>      
                 {{/if}}
             {{/each}}
-
+            
         </div>
     </div>
     
