@@ -36,5 +36,7 @@ I built this project in order to test my newfound knowledge of SQL and apply it 
 * Another node that we are just starting to learn about this week is sequelize, which takes a lot of what we were supposed to accomplish manually in this activity and handle it in a more "dry" manner. We were not supposed to use this method for this activity as we needed to learn how the database links to the server, but if I was to redo this activity using unit 14's knowledge I would try to accomplish it using sequelize. 
 
 # Link:
+[Link to Deployed Website](https://eat-da-burger-unit13.herokuapp.com/)
 
 # Screenshot: 
+![Screenshot of Deployed Website](./screenshot/burger-deployed.png)
